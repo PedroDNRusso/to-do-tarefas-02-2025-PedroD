@@ -3,7 +3,7 @@ const form = document.querySelector('#cadastro form')
 form.addEventListener('submit', e => {
     e.preventDefault()
     const dados = {
-        usuarioId: form.usuarioId.value,
+        usuario: form.usuario.value,
         descricao: form.descricao.value,
         setor: form.setor.value,
         prioridade: form.prioridade.value

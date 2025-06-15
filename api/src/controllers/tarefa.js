@@ -2,10 +2,10 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    const { usuarioId, descricao, setor, prioridade } = req.body;
+    const { usuario, descricao, setor, prioridade } = req.body;
     try {
         const tarefa = await prisma.tarefa.create({
-            data: { usuarioId, descricao, setor, prioridade },
+            data: { usuario, descricao, setor, prioridade },
         });
         res.status(201).json(tarefa).end();
     } catch (e) {

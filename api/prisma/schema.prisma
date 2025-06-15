@@ -15,16 +15,14 @@ datasource db {
 
 model Usuario{
   id Int @id @default(autoincrement())
-  nome String
+  nome String @db.VarChar(100) 
   email String @db.VarChar(100) 
-  tarefa tarefa[]
 }
 
 model tarefa{
   id Int @id @default(autoincrement())
-  usuarioId Int
+  usuario String @db.VarChar(100) 
   descricao String @db.VarChar(100) 
   setor String @db.VarChar(100) 
   prioridade String @db.VarChar(100)
-  usuario Usuario @relation(fields: [usuarioId], references: [id])
 }
