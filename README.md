@@ -135,6 +135,11 @@ No desenvolvimento dessa prova você deverá considerar os seguintes padrões:
 - Para todos os textos a fonte que você deverá utilizar é **Segoe UI**.
 - As cores para utilização no desenvolvimento das suas telas são:
 
+### DER & DCU
+
+![DER](./docs/DER.jpg)
+![DCU](./WEB/img/DCDD.jpg)
+
 |RGB|HEXADECIMAL|
 |-|-|
 |255, 255, 255|#FFFFFF|
