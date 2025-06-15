@@ -19,18 +19,20 @@ const read = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    try {
-        const tarefa = await prisma.tarefa.update({
-            data: req.body,
-            where: {
-                id: Number(req.params.id)
-            }
-        });
-        res.status(202).json(tarefa).end();
-    } catch (e) {
-        res.status(400).json(e).end();
-    }
-}
+  const { id } = req.params;
+  const { setor, descricao, prioridade, usuario, status } = req.body;
+
+  try {
+    const tarefa = await prisma.tarefa.update({
+      where: { id: Number(id) },
+      data: { setor, descricao, prioridade, usuario, status }, // status incluso aqui
+    });
+
+    res.json(tarefa);
+  } catch (error) {
+    res.status(400).json({ error: 'Erro ao atualizar tarefa.' });
+  }
+};
 
 const remove = async (req, res) => {
     try {
