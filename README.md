@@ -138,7 +138,7 @@ No desenvolvimento dessa prova você deverá considerar os seguintes padrões:
 ### DER & DCU
 
 ![DER](./docs/DER.jpg)
-![DCU](./WEB/img/DCDD.jpg)
+![DCU](./docs/DCU.jpg)
 
 |RGB|HEXADECIMAL|
 |-|-|
