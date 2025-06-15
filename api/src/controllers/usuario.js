@@ -18,18 +18,6 @@ const read = async (req, res) => {
     res.json(usuarios);
 }
 
-const readOne = async (req, res) => {
-    const usuarios = await prisma.usuario.findMany({
-        where:{
-            id: Number(req.params.id)
-        },
-        include:{
-            tarefa: true
-        }
-    });
-    res.json(usuarios);
-}
-
 const update = async (req, res) => {
     try {
         const usuario = await prisma.usuario.update({
@@ -60,7 +48,6 @@ const remove = async (req, res) => {
 module.exports = {
     create,
     read,
-    readOne,
     update,
     remove
 }

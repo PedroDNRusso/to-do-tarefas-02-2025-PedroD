@@ -25,4 +25,5 @@ model tarefa{
   descricao String @db.VarChar(100) 
   setor String @db.VarChar(100) 
   prioridade String @db.VarChar(100)
+  status String @default ("fazer")
 }

@@ -10,13 +10,11 @@ routes.get('/', (req, res) => {
 
 routes.post('/usuarios',usuario.create);
 routes.get('/usuarios',usuario.read);
-routes.get('/usuarios/:id',usuario.readOne);
 routes.patch('/usuarios/:id',usuario.update);
 routes.delete('/usuarios/:id',usuario.remove);
 
 routes.post('/tarefas',tarefa.create);
 routes.get('/tarefas',tarefa.read);
-routes.get('/tarefas/:id',tarefa.readOne);
 routes.patch('/tarefas/:id',tarefa.update);
 routes.delete('/tarefas/:id',tarefa.remove);
 

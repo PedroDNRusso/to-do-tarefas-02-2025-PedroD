@@ -2,10 +2,10 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    const { usuario, descricao, setor, prioridade } = req.body;
+    const { usuario, descricao, setor, prioridade, status } = req.body;
     try {
         const tarefa = await prisma.tarefa.create({
-            data: { usuario, descricao, setor, prioridade },
+            data: { usuario, descricao, setor, prioridade, status },
         });
         res.status(201).json(tarefa).end();
     } catch (e) {
@@ -15,18 +15,6 @@ const create = async (req, res) => {
 
 const read = async (req, res) => {
     const tarefas = await prisma.tarefa.findMany();
-    res.json(tarefas);
-}
-
-const readOne = async (req, res) => {
-    const tarefas = await prisma.tarefa.findMany({
-        where:{
-            id: Number(req.params.id)
-        },
-        include:{
-            usuario: true
-        }
-    });
     res.json(tarefas);
 }
 
@@ -60,7 +48,6 @@ const remove = async (req, res) => {
 module.exports = {
     create,
     read,
-    readOne,
     update,
     remove
 }
