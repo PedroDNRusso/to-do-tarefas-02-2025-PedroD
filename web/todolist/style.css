@@ -24,6 +24,28 @@ header {
     padding: 20px 0;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cce4ff;
+}
+
 .board {
     display: flex;
     justify-content: space-around;
@@ -64,24 +86,69 @@ header {
     font-size: 14px;
 }
 
+.card .conteudo {
+    margin-bottom: 10px;
+}
+
+.card .form-editar,
+.card .form-mover {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.card input,
+.card select {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card .form-editar button,
+.card .form-mover button {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 6px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card .form-editar button:hover,
+.card .form-mover button:hover {
+    background-color: #004a9b;
+}
+
 .card .actions {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.card button {
+.card .actions button {
+    margin: 4px 2px;
     padding: 5px 10px;
     border: none;
-    border-radius: 5px;
-    color: white;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 12px;
 }
 
-.card .edit {
-    background-color: #ffa500;
+/* Botões individuais */
+.edit {
+    background-color: #ffc107;
+    color: #000;
 }
 
-.card .delete {
-    background-color: #d11a2a;
+.move {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.delete {
+    background-color: #dc3545;
+    color: #fff;
 }
