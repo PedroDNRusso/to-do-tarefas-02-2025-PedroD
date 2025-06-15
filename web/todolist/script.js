@@ -58,9 +58,9 @@ function salvarEdicao(id) {
     const [setor, descricao, prioridade, usuario] = [...inputs].map(input => input.value);
 
     fetch(`${URL}/${id}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ setor, descricao, prioridade, usuario })
+        body: JSON.stringify({ setor, descricao, prioridade, usuario}) // status adicionado aqui
     }).then(() => location.reload());
 }
 
@@ -68,7 +68,7 @@ function salvarMovimento(id) {
     const status = document.querySelector(`#tarefa-${id} select`).value;
 
     fetch(`${URL}/${id}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status })
     }).then(() => location.reload());
