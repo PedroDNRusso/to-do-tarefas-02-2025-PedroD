@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastrar Tarefas</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastrar Tarefas</h1>
+        <nav>
+            <ul>
+                <li><a href="/tarefas">Tarefas</a></li>
+                <li><a href="/tarefas/cadastrar">Cadastrar Tarefa</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="cadastro">
+        <main>
+            <form>
+                <label for="setor">setor:</label>
+                <input type="text" id="setor" name="setor" required>
+                <br>
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+                <br>
+                <label for="prioridade">Prioridade:</label>
+                <textarea id="prioridade" name="prioridade" required></textarea>
+                <br>
+                <label for="usuarioId">ID do usuario:</label>
+                <input type="number" id="usuarioId" name="usuarioId" required>
+                <br>
+                <button onclick="cadastrarTarefa()" type="submit">Cadastrar</button>
+            </form> 
+        </main>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
