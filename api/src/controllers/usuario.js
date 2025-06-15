@@ -2,9 +2,10 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
+    const { nome, email } = req.body;
     try {
         const usuario = await prisma.usuario.create({
-            data: req.body
+            data: { nome, email },
         });
         res.status(201).json(usuario).end();
     } catch (e) {
