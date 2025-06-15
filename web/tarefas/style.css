@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -62,13 +62,16 @@ form label {
 }
 
 form input[type="text"],
-form textarea {
+form textarea,
+form select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    background-color: #fff;
+    color: var(--text-color);
 }
 
 form textarea {
